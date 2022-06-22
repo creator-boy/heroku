@@ -11,11 +11,6 @@
     "deployer"
   ],
   "env": {
-    "OTHER_INSTALLS": {
-      "description": "If you need install packages for running your app, fill with space in between each package.Get them from the requirements file of the repo you want to deploy",
-      "value": "None",
-      "required": false
-    },
     "BOT_TOKEN": {
      "description": "Your Bot token from @Botfather"
        },
