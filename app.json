@@ -1,0 +1,53 @@
+{
+  "name": "HerokuBanBypass-Deployer",
+  "description": "With this you can deploy Repos that are banned/blacklisted by Heroku.",
+  "keywords": [
+    "telegram",
+    "open",
+    "source",
+    "multi",
+    "purpose",
+    "remote",
+    "deployer"
+  ],
+  "env": {
+    "OTHER_INSTALLS": {
+      "description": "If you need install packages for running your app, fill with space in between each package.Get them from the requirements file of the repo you want to deploy",
+      "value": "None",
+      "required": false
+    },
+    "BOT_TOKEN": {
+     "description": "Your Bot token from @Botfather"
+       },
+     "API_ID": {
+
+        "description": "Your API_ID from https://my.telegram.org/apps"
+
+        },
+
+        "API_HASH": {
+
+            "description": "Your API_HASH from https://my.telegram.org/apps"
+
+        }
+  },
+  "addons": [
+  ],
+  "buildpacks": [
+  {
+    "url": "heroku/python"
+  },
+  {
+     "url": "https://github.com/amivin/aria2-heroku.git"
+   },
+   {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
